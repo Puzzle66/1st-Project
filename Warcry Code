@@ -1,0 +1,612 @@
+
+#My first project and everything is going well.
+
+print("Hello from Puzzle, hope this helps!")
+print("")
+#Leader 1
+lname1 = input("Enter a Leader Unit Name: ")
+lqty1 = 1
+#leader 1 point value
+while True:
+    try:
+        lpt1 = int(input("Enter Unit's Point Value: "))
+    except ValueError:
+        print("Sorry, I don't understand letters give me numbers: ")
+        continue
+    else:
+        # print lname1 and grouping it
+        print("You have " + str(lqty1) + " " + lname1 + " that is worth " + str(lpt1) + " points")
+        lname1, lqty1, lpt1
+        lgro1 = [lname1, lqty1, lpt1]
+        print(lgro1)
+        break
+
+
+
+#yes/no look for statement for leader2
+# while True:
+#     ynleader = input('Do you have another leader unit? (yes or no) ')
+#     if ynleader == '' or not ynleader[0].lower() in ['y', 'n']:print('Please answer with yes or no!')
+#     else:break
+# #yes for leader2
+# if ynleader[0].lower() == 'y':
+#     lname2 = input("Enter your 2nd Leader Unit Name ")
+#     lqty2 = 1
+#     #leader 2 point value
+#     while True:
+#         try:
+#             lpt2 = int(input("Enter Unit's Point Value: "))
+#         except ValueError:
+#             print("Sorry, I don't understand letters give me numbers")
+#             continue
+#         else:
+#             break
+#
+#     # print lname2 and grouping it
+#     print("You have " + str(lqty2) + " " + lname2 + " that is worth " + str(lpt2) + " points")
+#     lname2, lqty2, lpt2
+#     lgro2 = [lname2, lqty2, lpt2]
+#     print(lgro2[0], lgro2[1], lgro2[2])
+# if ynleader[0].lower() == 'n':
+#     lname2 = None
+#     lpt2 = None
+#     lqty2 = None
+#     lgro2 = None
+#
+#
+#
+# #yes/no Ally
+# while True:
+#     ynally = input('Do you have an Ally unit? (yes or no) ')
+#     if ynally == '' or not ynally[0].lower() in ['y', 'n']:print('Please answer with yes or no!')
+#     else:break
+# #Ally
+# if ynally[0].lower() == 'y':
+#     aname1 = input("Enter Ally's name: ")
+#     aqty1 = 1
+#     #leader 2 point value
+#     while True:
+#         try:
+#             apt1 = int(input("Enter Ally's Point Value: "))
+#         except ValueError:
+#             print("Sorry, I don't understand letters give me numbers")
+#             continue
+#         else:
+#             aname1, aqty1, apt1
+#             agro1 = (aname1, aqty1, apt1)
+#             break
+# if ynally[0].lower() == 'n':
+#     aname1 = None
+#     apt1 = None
+#     aqty1 = None
+#     agro1 = None
+#
+print()
+print("Now for core units")
+print()
+#uname1
+uname1 = input("Enter Core Unit Name: ")
+#unit quantity
+while True:
+    try:
+        uqty1 = (input("Enter How Many Units You Have: "))
+    except ValueError:
+        print("Sorry, I don't understand letters give me numbers")
+        continue
+    else:
+
+        break
+#unit point value
+while True:
+    try:
+        upt1 = (input("Enter Unit's Point Value: "))
+    except ValueError:
+        print("Sorry, I don't understand letters give me numbers")
+        continue
+    else:
+        # print uname1 and grouping it
+        print("You have " + str(uqty1) + " " + uname1 + " that are worth " + str(upt1) + " points each")
+        uname1, uqty1, upt1
+        ugro1 = [uname1, uqty1, upt1]
+        print(ugro1[0], ugro1[1], ugro1[2])
+        print()
+        break
+
+
+#yes/no look for units2
+
+while True:
+    ynunit2 = input('Do you have another unit? (yes or no) ')
+    #if var[:1].lower() not in ('y', 'n'): if I'm confident that a number can not be entered
+    if ynunit2 == '' or not ynunit2[0].lower() in ['y', 'n']:print('Please answer with yes or no! ')
+    else:break
+#yes for unit2
+if ynunit2[0].lower() == 'y':
+    uname2 = input("Enter Core Unit Name: ")
+    # unit quantity
+    while True:
+        try:
+            uqty2 = str(int(input("Enter How Many Units You Have: ")))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            break
+    # unit point value
+    while True:
+        try:
+            upt2 = int(input("Enter Unit's Point Value: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            ynunit3 = "y"
+            # print uname and grouping it
+            print("You have " + str(uqty2) + " " + uname2 + " that are worth " + str(upt2) + " points each")
+            uname2, uqty2, upt2
+            ugro2 = [uname2, uqty2, upt2]
+            print(ugro2[0], ugro2[1], ugro2[2])
+            break
+#no for unit2
+if ynunit2[0].lower() == 'n':
+    ynunit3 = "n"
+    ugro2 = None
+    uqty2 = [0]
+    uname2 = None
+    upt2 = [0]
+
+
+#yes/no look for units3
+while True:
+    if ynunit3 == "n":
+        break
+    ynunit3 = input('Do you have another unit? (yes or no) ')
+    if ynunit3 == '' or not ynunit3[0].lower() in ['y', 'n']:print('Please answer with yes or no!')
+    else:break
+#yes for unit3
+if ynunit3[0].lower() == 'y':
+    uname3 = input("Enter Core Unit Name: ")
+    # unit quantity
+    while True:
+        try:
+            uqty3 = int(input("Enter How Many Units You Have: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            ynunit4 = "y"
+            break
+    # unit point value
+    while True:
+        try:
+            upt3 = int(input("Enter Unit's Point Value: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            ynunit4 = "y"
+            # print uname and grouping it
+            print("You have " + str(uqty3) + " " + uname3 + " that are worth " + str(upt3) + " points each")
+            uname3, uqty3, upt3
+            ugro3 = [uname3, uqty3, upt3]
+            print(ugro3[0], ugro3[1], ugro3[2])
+            break
+#no for unit3
+if ynunit3[0].lower() == 'n':
+    ynunit4 = "n"
+    ugro3 = None
+    uname3 = None
+    upt3 = [0]
+    uqty3 = [0]
+
+#yes/no look for units4
+while True:
+    if ynunit4 == "n":
+        break
+    ynunit4 = input('Do you have another unit? (yes or no) ')
+    if ynunit4 == '' or not ynunit4[0].lower() in ['y', 'n']:print('Please answer with yes or no!')
+    else:break
+#yes for unit4
+if ynunit4[0].lower() == 'y':
+    uname4 = input("Enter Core Unit Name: ")
+    # unit quantity
+    while True:
+        try:
+            uqty4 = int(input("Enter How Many Units You Have: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            ynunit5 = "y"
+            break
+    # unit point value
+    while True:
+        try:
+            upt4 = int(input("Enter Unit's Point Value: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            # print uname and grouping it
+            print("You have " + str(uqty4) + " " + uname4 + " that are worth " + str(upt4) + " points each")
+            uname4, uqty4, upt4
+            ugro4 = [uname4, uqty4, upt4]
+            print(ugro4[0], ugro4[1], ugro4[2])
+            break
+#no for unit4
+if ynunit4[0].lower() == 'n':
+    ynunit5 = "n"
+    ugro4 = None
+    uname4 = None
+    upt4 = [0]
+    uqty4 = [0]
+
+#yes/no look for units5
+while True:
+    if ynunit5 == "n":
+        break
+    ynunit5 = input('Do you have another unit? (yes or no) ')
+    if ynunit5 == '' or not ynunit5[0].lower() in ['y', 'n']:print('Please answer with yes or no!')
+    else:break
+#yes for unit5
+if ynunit5[0].lower() == 'y':
+    uname5 = input("Enter Core Unit Name: ")
+    # unit quantity
+    while True:
+        try:
+            uqty5 = int(input("Enter How Many Units You Have: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            break
+    # unit point value
+    while True:
+        try:
+            upt5 = int(input("Enter Unit's Point Value: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            ynunit6 = "y"
+            # print uname and grouping it
+            print("You have " + str(uqty5) + " " + uname5 + " that are worth " + str(upt5) + " points each")
+            uname5, uqty5, upt5
+            ugro5 = [uname5, uqty5, upt5]
+            print(ugro5[0], ugro5[1], ugro5[2])
+            break
+#no for unit5
+if ynunit5[0].lower() == 'n':
+    ynunit6 = "n"
+    ugro5 = None
+    uname5 = None
+    upt5 = [0]
+    uqty5 = [0]
+
+#yes/no look for units6
+while True:
+    if ynunit6 == "n":
+        break
+    ynunit6 = input('Do you have another unit? (yes or no) ')
+    if ynunit6 == '' or not ynunit6[0].lower() in ['y', 'n']:print('Please answer with yes or no!')
+    else:break
+#yes for unit6
+if ynunit6[0].lower() == 'y':
+    uname6 = input("Enter Core Unit Name: ")
+    # unit quantity
+    while True:
+        try:
+            uqty6 = int(input("Enter How Many Units You Have: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            ynunit7 = "y"
+            break
+    # unit point value
+    while True:
+        try:
+            upt6 = int(input("Enter Unit's Point Value: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            # print uname and grouping it
+            print("You have " + str(uqty6) + " " + uname6 + " that are worth " + str(upt6) + " points each")
+            uname6, uqty6, upt6
+            ugro6 = [uname6, uqty6, upt6]
+            print(ugro6[0], ugro6[1], ugro6[2])
+            break
+#no for unit6
+if ynunit6[0].lower() == 'n':
+    ynunit7 = "n"
+    ugro6 = None
+    uname6 = None
+    upt6 = [0]
+    uqty6 = [0]
+
+#yes/no look for units7
+while True:
+    if ynunit7 == "n":
+        break
+    ynunit7 = input('Do you have another unit? (yes or no) ')
+    if ynunit7 == '' or not ynunit7[0].lower() in ['y', 'n']:print('Please answer with yes or no!')
+    else:break
+#yes for unit7
+if ynunit7[0].lower() == 'y':
+    uname7 = input("Enter Core Unit Name: ")
+    # unit quantity
+    while True:
+        try:
+            uqty7 = int(input("Enter How Many Units You Have: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            break
+    # unit point value
+    while True:
+        try:
+            upt7 = int(input("Enter Unit's Point Value: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            ynunit8 = "y"
+            # print uname and grouping it
+            print("You have " + str(uqty7) + " " + uname7 + " that are worth " + str(upt7) + " points each")
+            uname7, uqty7, upt7
+            ugro7 = [uname7, uqty7, upt7]
+            print(ugro7[0], ugro7[1], ugro7[2])
+            break
+#no for unit7
+if ynunit7[0].lower() == 'n':
+    ynunit8 = "n"
+    ugro7 = None
+    uname7 = None
+    upt7 = [0]
+    uqty7 = [0]
+
+#yes/no look for units8
+while True:
+    if ynunit8 == "n":
+        break
+    ynunit8 = input('Do you have another unit? (yes or no) ')
+    if ynunit8 == '' or not ynunit8[0].lower() in ['y', 'n']:print('Please answer with yes or no!')
+    else:break
+#yes for unit8
+if ynunit8[0].lower() == 'y':
+    uname8 = input("Enter Core Unit Name: ")
+    # unit quantity
+    while True:
+        try:
+            uqty8 = int(input("Enter How Many Units You Have: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            break
+    # unit point value
+    while True:
+        try:
+            upt8 = int(input("Enter Unit's Point Value: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            ynunit9 = "y"
+            # print uname and grouping it
+            print("You have " + str(uqty8) + " " + uname8 + " that are worth " + str(upt8) + " points each")
+            uname8, uqty8, upt8
+            ugro8 = [uname8, uqty8, upt8]
+            print(ugro8[0], ugro8[1], ugro8[2])
+            break
+#no for unit8
+if ynunit8[0].lower() == 'n':
+    ynunit9 = "n"
+    ugro8 = None
+    uname8 = None
+    upt8 = [0]
+    uqty8 = [0]
+
+#yes/no look for units9
+while True:
+    if ynunit9 == "n":
+        break
+    ynunit9 = input('Do you have another unit? (yes or no) ')
+    if ynunit9 == '' or not ynunit9[0].lower() in ['y', 'n']:print('Please answer with yes or no!')
+    else:break
+#yes for unit9
+if ynunit9[0].lower() == 'y':
+    uname9 = input("Enter Core Unit Name: ")
+    # unit quantity
+    while True:
+        try:
+            uqty9 = int(input("Enter How Many Units You Have: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            break
+    # unit point value
+    while True:
+        try:
+            upt9 = int(input("Enter Unit's Point Value: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            ynunit10 = "y"
+            # print uname and grouping it
+            print("You have " + str(uqty9) + " " + uname9 + " that are worth " + str(upt9) + " points each")
+            uname9, uqty9, upt9
+            ugro9 = [uname9, uqty9, upt9]
+            print(ugro9[0], ugro9[1], ugro9[2])
+            break
+#no for unit9
+if ynunit9[0].lower() == 'n':
+    ynunit10 = "n"
+    ugro9 = None
+    uname9 = None
+    upt9 = [0]
+    uqty9 = [0]
+
+#yes/no look for units10
+while True:
+    if ynunit10 == "n":
+        break
+    ynunit10 = input('Do you have another unit? (yes or no) ')
+    if ynunit10 == '' or not ynunit10[0].lower() in ['y', 'n']:print('Please answer with yes or no!')
+    else:break
+#yes for unit10
+if ynunit10[0].lower() == 'y':
+    uname10 = input("Enter Core Unit Name: ")
+    # unit quantity
+    while True:
+        try:
+            uqty10 = int(input("Enter How Many Units You Have: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            break
+    # unit point value
+    while True:
+        try:
+            upt10 = int(input("Enter Unit's Point Value: "))
+        except ValueError:
+            print("Sorry, I don't understand letters give me numbers")
+            continue
+        else:
+            ynunit11 = [0]
+            # print uname and grouping it
+            print("You have " + str(uqty10) + " " + uname10 + " that are worth " + str(upt10) + " points each")
+            uname10, uqty10, upt10
+            ugro10 = [uname10, uqty10, upt10]
+            print(ugro10[0], ugro10[1], ugro10[2])
+            break
+#no for unit10
+if ynunit10[0].lower() == 'n':
+    ynunit10 = 0
+    ugro10 = None
+    uname10 = None
+    upt10 = [0]
+    uqty10 = [0]
+    ynunit11 = [0]
+
+#Final Filtering and Grouping (just add #agro1 in this list for Ally
+l1group = (lgro1,ugro1,ugro2,ugro3,ugro4,ugro5,ugro6,ugro7,ugro8,ugro9,ugro10)
+l1fgroup = filter(lambda item: item != None, l1group)
+print(list(l1fgroup))
+#
+# l2group = (lgro2,agro1,ugro1,ugro2,ugro3,ugro4,ugro5,ugro6,ugro7,ugro8,ugro9,ugro10)
+# l2fgroup = filter(lambda item: item != None, l2group)
+# print(list(l2fgroup))
+
+
+
+#CALCS + MATHS
+
+import itertools
+
+
+u1_range = range(0, int(uqty1[0]) +1)
+u2_range = range(0, int(uqty2[0]) +1)
+u3_range = range(0, int(uqty3[0]) +1)
+u4_range = range(0, int(uqty4[0]) +1)
+u5_range = range(0, int(uqty5[0]) +1)
+u6_range = range(0, int(uqty6[0]) +1)
+u7_range = range(0, int(uqty7[0]) +1)
+u8_range = range(0, int(uqty8[0]) +1)
+u9_range = range(0, int(uqty9[0]) +1)
+u10_range =range(0, int(uqty10[0])+1)
+
+if int(uqty1[0]) >= 1:
+    a = itertools.product([1], [u1_range])
+    b = (filter(lambda x: 1 + x[1] in range(3, 15), a))
+    c = (filter(lambda x: (lpt1) + (int(x[0]) * (int(upt1))) in range(960, 1001), b))
+
+if uqty2[0] == [0]:
+    unit3 = [0]
+    a = itertools.product((u1_range))
+    b = (filter(lambda x: x[0] in range(3, 15), a))
+    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) in range(960, 1001), b))
+if int(uqty2[0]) >= 1:
+    a = itertools.product((u1_range, u2_range))
+    b = (filter(lambda x: (x[0] + x[1]) in range(3, 15), a))
+    c = (filter(lambda x: ((lpt1) + (x[0] * (upt1)) + (x[1] * (upt2))) in range(960, 1001), b))
+
+if uqty3 == [0]:
+    uqty4 = [0]
+if uqty3 >= [1]:
+    a = itertools.product((u1_range, u2_range, u3_range))
+    b = (filter(lambda x: x[0] + x[1] + x[2] in range(3,15), a))
+    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3))) in range(960, 1001), b)
+
+if uqty4 == [0]:
+    uqty5 = [0]
+if uqty4 >= [1]:
+    a = itertools.product((u1_range,u2_range, u3_range, u4_range))
+    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] in range(3,15), a))
+    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4))) in range(960, 1001), b)
+
+if uqty5 == [0]:
+    uqty6 = [0]
+if uqty5 >= [1]:
+    a = itertools.product((u1_range,u2_range, u3_range, u4_range, u5_range))
+    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] in range(3,15), a))
+    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5))) in range(960, 1001), b)
+
+if uqty6 == [0]:
+    uqty7 = [0]
+if uqty6 >= [1]:
+    a = itertools.product((u1_range, u2_range, u3_range, u4_range, u5_range, u6_range))
+    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] in range(3,15), a))
+    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6))) in range(960, 1001), b)
+
+if uqty7 == [0]:
+    uqty8 = [0]
+if uqty7 >= [1]:
+    a = itertools.product((u1_range, u2_range, u3_range, u4_range, u5_range, u6_range, u7_range))
+    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] in range(3,15), a))
+    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7))) in range(960, 1001), b)
+
+if uqty8 == [0]:
+    uqty9 = [0]
+if uqty8 >= [1]:
+    a = itertools.product((u1_range, u2_range, u3_range, u4_range, u5_range, u6_range, u7_range, u8_range))
+    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] in range(3,15), a))
+    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7)) + (x[7] * (upt8))) in range(960, 1001), b)
+
+if uqty9 == [0]:
+    uqty10 = [0]
+if uqty10 >= [1]:
+    a = itertools.product((u1_range, u2_range, u3_range, u4_range, u5_range, u6_range, u7_range, u8_range, u9_range))
+    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] in range(3,15), a))
+    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7)) + (x[7] * (upt8)) + (x[8] * (upt9))) in range(960, 1001), b)
+
+if uqty10 == [0]:
+    uqty11 = [0]
+if uqty10 >= [1]:
+    a = itertools.product((u1_range, u2_range, u3_range, u4_range, u5_range, u6_range, u7_range, u8_range, u9_range, u10_range))
+    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] + x[9] in range(3,15), a))
+    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7)) + (x[7] * (upt8)) + (x[8] * (upt9)) + (x[9] * (upt10))) in range(960, 1001), b)
+
+if uqty11 == [0]:
+    print('Done')
+
+for out_come in c:
+    print(out_come)
+
+with open('nums.txt', 'w') as f:
+    for out_come in b:
+       f.write((str(out_come)) + '\n')
+
+with open('nums.txt', 'r') as f:
+    print(f.readlines())
+
+
+# if uqty10 == [0]:
+#     a = itertools.product((u1_range))
+#     b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] in range(3,15), a))
+#     c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7)) + (x[7] * (upt8)) + (x[8] * (upt9))) in range(960, 1001), b)
