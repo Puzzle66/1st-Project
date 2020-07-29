@@ -6,6 +6,7 @@ print("")
 #Leader 1
 lname1 = input("Enter a Leader Unit Name: ")
 lqty1 = 1
+lqty1 = int(lqty1)
 #leader 1 point value
 while True:
     try:
@@ -20,8 +21,6 @@ while True:
         lgro1 = [lname1, lqty1, lpt1]
         print(lgro1)
         break
-
-
 
 #yes/no look for statement for leader2
 # while True:
@@ -89,7 +88,7 @@ uname1 = input("Enter Core Unit Name: ")
 #unit quantity
 while True:
     try:
-        uqty1 = (input("Enter How Many Units You Have: "))
+        uqty1 = int(input("Enter How Many Units You Have: "))
     except ValueError:
         print("Sorry, I don't understand letters give me numbers")
         continue
@@ -99,7 +98,7 @@ while True:
 #unit point value
 while True:
     try:
-        upt1 = (input("Enter Unit's Point Value: "))
+        upt1 = int(input("Enter Unit's Point Value: "))
     except ValueError:
         print("Sorry, I don't understand letters give me numbers")
         continue
@@ -111,7 +110,6 @@ while True:
         print(ugro1[0], ugro1[1], ugro1[2])
         print()
         break
-
 
 #yes/no look for units2
 
@@ -126,7 +124,7 @@ if ynunit2[0].lower() == 'y':
     # unit quantity
     while True:
         try:
-            uqty2 = str(int(input("Enter How Many Units You Have: ")))
+            uqty2 = int(input("Enter How Many Units You Have: "))
         except ValueError:
             print("Sorry, I don't understand letters give me numbers")
             continue
@@ -151,9 +149,9 @@ if ynunit2[0].lower() == 'y':
 if ynunit2[0].lower() == 'n':
     ynunit3 = "n"
     ugro2 = None
-    uqty2 = [0]
+    uqty2 = 0
     uname2 = None
-    upt2 = [0]
+    upt2 = 0
 
 
 #yes/no look for units3
@@ -196,8 +194,8 @@ if ynunit3[0].lower() == 'n':
     ynunit4 = "n"
     ugro3 = None
     uname3 = None
-    upt3 = [0]
-    uqty3 = [0]
+    upt3 = 0
+    uqty3 = 0
 
 #yes/no look for units4
 while True:
@@ -238,8 +236,8 @@ if ynunit4[0].lower() == 'n':
     ynunit5 = "n"
     ugro4 = None
     uname4 = None
-    upt4 = [0]
-    uqty4 = [0]
+    upt4 = 0
+    uqty4 = 0
 
 #yes/no look for units5
 while True:
@@ -280,8 +278,8 @@ if ynunit5[0].lower() == 'n':
     ynunit6 = "n"
     ugro5 = None
     uname5 = None
-    upt5 = [0]
-    uqty5 = [0]
+    upt5 = 0
+    uqty5 = 0
 
 #yes/no look for units6
 while True:
@@ -322,8 +320,8 @@ if ynunit6[0].lower() == 'n':
     ynunit7 = "n"
     ugro6 = None
     uname6 = None
-    upt6 = [0]
-    uqty6 = [0]
+    upt6 = 0
+    uqty6 = 0
 
 #yes/no look for units7
 while True:
@@ -364,8 +362,8 @@ if ynunit7[0].lower() == 'n':
     ynunit8 = "n"
     ugro7 = None
     uname7 = None
-    upt7 = [0]
-    uqty7 = [0]
+    upt7 = 0
+    uqty7 = 0
 
 #yes/no look for units8
 while True:
@@ -406,8 +404,8 @@ if ynunit8[0].lower() == 'n':
     ynunit9 = "n"
     ugro8 = None
     uname8 = None
-    upt8 = [0]
-    uqty8 = [0]
+    upt8 = 0
+    uqty8 = 0
 
 #yes/no look for units9
 while True:
@@ -448,8 +446,8 @@ if ynunit9[0].lower() == 'n':
     ynunit10 = "n"
     ugro9 = None
     uname9 = None
-    upt9 = [0]
-    uqty9 = [0]
+    upt9 = 0
+    uqty9 = 0
 
 #yes/no look for units10
 while True:
@@ -490,8 +488,8 @@ if ynunit10[0].lower() == 'n':
     ynunit10 = 0
     ugro10 = None
     uname10 = None
-    upt10 = [0]
-    uqty10 = [0]
+    upt10 = 0
+    uqty10 = 0
     ynunit11 = [0]
 
 #Final Filtering and Grouping (just add #agro1 in this list for Ally
@@ -509,101 +507,97 @@ print(list(l1fgroup))
 
 import itertools
 
+l1_range = range(1, int(lqty1) +1)
+u1_range = range(0, int(uqty1 +1))
+u2_range = range(0, int(uqty2 +1))
+u3_range = range(0, int(uqty3 +1))
+u4_range = range(0, int(uqty4 +1))
+u5_range = range(0, int(uqty5 +1))
+u6_range = range(0, int(uqty6 +1))
+u7_range = range(0, int(uqty7 +1))
+u8_range = range(0, int(uqty8 +1))
+u9_range = range(0, int(uqty9 +1))
+u10_range =range(0, int(uqty10+1))
 
-u1_range = range(0, int(uqty1[0]) +1)
-u2_range = range(0, int(uqty2[0]) +1)
-u3_range = range(0, int(uqty3[0]) +1)
-u4_range = range(0, int(uqty4[0]) +1)
-u5_range = range(0, int(uqty5[0]) +1)
-u6_range = range(0, int(uqty6[0]) +1)
-u7_range = range(0, int(uqty7[0]) +1)
-u8_range = range(0, int(uqty8[0]) +1)
-u9_range = range(0, int(uqty9[0]) +1)
-u10_range =range(0, int(uqty10[0])+1)
+if uqty1 >= 1:
+    a = itertools.product((l1_range), (u1_range))
+    b = (filter(lambda x: (x[0] + x[1]) in range(3,15), a))
+    c = (filter(lambda x: ((lpt1) + (x[1] * (upt1))) in range(960, 1001), b))
 
-if int(uqty1[0]) >= 1:
-    a = itertools.product([1], [u1_range])
-    b = (filter(lambda x: 1 + x[1] in range(3, 15), a))
-    c = (filter(lambda x: (lpt1) + (int(x[0]) * (int(upt1))) in range(960, 1001), b))
+if uqty2 >= 1:
+    a = itertools.product((l1_range), (u1_range), (u2_range))
+    b = (filter(lambda x: (x[0] + x[1] + x[2]) in range(3,15), a))
+    c = (filter(lambda x: ((lpt1) + (x[1] * (upt1)) + (x[2] * (upt2))) in range(960, 1001), b))
 
-if uqty2[0] == [0]:
-    unit3 = [0]
-    a = itertools.product((u1_range))
-    b = (filter(lambda x: x[0] in range(3, 15), a))
-    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) in range(960, 1001), b))
-if int(uqty2[0]) >= 1:
-    a = itertools.product((u1_range, u2_range))
-    b = (filter(lambda x: (x[0] + x[1]) in range(3, 15), a))
-    c = (filter(lambda x: ((lpt1) + (x[0] * (upt1)) + (x[1] * (upt2))) in range(960, 1001), b))
-
-if uqty3 == [0]:
-    uqty4 = [0]
-if uqty3 >= [1]:
+if uqty3 == 0:
+    uqty4 = 0
+if uqty3 >= 1:
     a = itertools.product((u1_range, u2_range, u3_range))
     b = (filter(lambda x: x[0] + x[1] + x[2] in range(3,15), a))
     c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3))) in range(960, 1001), b)
 
-if uqty4 == [0]:
-    uqty5 = [0]
-if uqty4 >= [1]:
+if uqty4 == 0:
+    uqty5 = 0
+if uqty4 >= 1:
     a = itertools.product((u1_range,u2_range, u3_range, u4_range))
     b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] in range(3,15), a))
     c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4))) in range(960, 1001), b)
 
-if uqty5 == [0]:
-    uqty6 = [0]
-if uqty5 >= [1]:
+if uqty5 == 0:
+    uqty6 = 0
+if uqty5 >= 1:
     a = itertools.product((u1_range,u2_range, u3_range, u4_range, u5_range))
     b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] in range(3,15), a))
     c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5))) in range(960, 1001), b)
 
-if uqty6 == [0]:
-    uqty7 = [0]
-if uqty6 >= [1]:
+if uqty6 == 0:
+    uqty7 = 0
+if uqty6 >= 1:
     a = itertools.product((u1_range, u2_range, u3_range, u4_range, u5_range, u6_range))
     b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] in range(3,15), a))
     c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6))) in range(960, 1001), b)
 
-if uqty7 == [0]:
-    uqty8 = [0]
-if uqty7 >= [1]:
+if uqty7 == 0:
+    uqty8 = 0
+if uqty7 >= 1:
     a = itertools.product((u1_range, u2_range, u3_range, u4_range, u5_range, u6_range, u7_range))
     b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] in range(3,15), a))
     c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7))) in range(960, 1001), b)
 
-if uqty8 == [0]:
-    uqty9 = [0]
-if uqty8 >= [1]:
+if uqty8 == 0:
+    uqty9 = 0
+if uqty8 >= 1:
     a = itertools.product((u1_range, u2_range, u3_range, u4_range, u5_range, u6_range, u7_range, u8_range))
     b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] in range(3,15), a))
     c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7)) + (x[7] * (upt8))) in range(960, 1001), b)
 
-if uqty9 == [0]:
-    uqty10 = [0]
-if uqty10 >= [1]:
+if uqty9 == 0:
+    uqty10 = 0
+if uqty10 >= 1:
     a = itertools.product((u1_range, u2_range, u3_range, u4_range, u5_range, u6_range, u7_range, u8_range, u9_range))
     b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] in range(3,15), a))
     c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7)) + (x[7] * (upt8)) + (x[8] * (upt9))) in range(960, 1001), b)
 
-if uqty10 == [0]:
-    uqty11 = [0]
-if uqty10 >= [1]:
+if uqty10 == 0:
+    uqty11 = 0
+if uqty10 >= 1:
+    uqty11 = 0
     a = itertools.product((u1_range, u2_range, u3_range, u4_range, u5_range, u6_range, u7_range, u8_range, u9_range, u10_range))
     b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] + x[9] in range(3,15), a))
     c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7)) + (x[7] * (upt8)) + (x[8] * (upt9)) + (x[9] * (upt10))) in range(960, 1001), b)
 
-if uqty11 == [0]:
+if uqty11 == 0:
     print('Done')
 
 for out_come in c:
     print(out_come)
 
 with open('nums.txt', 'w') as f:
-    for out_come in b:
+    for out_come in c:
        f.write((str(out_come)) + '\n')
 
-with open('nums.txt', 'r') as f:
-    print(f.readlines())
+# with open('nums.txt', 'r') as f:
+#     print(f.readlines())
 
 
 # if uqty10 == [0]:
