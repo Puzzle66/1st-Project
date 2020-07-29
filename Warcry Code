@@ -526,81 +526,77 @@ if uqty1 >= 1:
 
 if uqty2 >= 1:
     a = itertools.product((l1_range), (u1_range), (u2_range))
-    b = (filter(lambda x: (x[0] + x[1] + x[2]) in range(3,15), a))
+    b = (filter(lambda x: (x[0] + x[1] + x[2]) in range(3, 15), a))
     c = (filter(lambda x: ((lpt1) + (x[1] * (upt1)) + (x[2] * (upt2))) in range(960, 1001), b))
 
 if uqty3 == 0:
     uqty4 = 0
 if uqty3 >= 1:
-    a = itertools.product((u1_range, u2_range, u3_range))
-    b = (filter(lambda x: x[0] + x[1] + x[2] in range(3,15), a))
-    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3))) in range(960, 1001), b)
+    a = itertools.product((l1_range), (u1_range), (u2_range), (u3_range))
+    b = (filter(lambda x: (x[0] + x[1] + x[2] + x[3]) in range(3, 15), a))
+    c = (filter(lambda x: ((lpt1) + (x[1] * (upt1)) + (x[2] * (upt2)) + (x[3] * (upt3))) in range(960, 1001), b))
 
 if uqty4 == 0:
     uqty5 = 0
 if uqty4 >= 1:
-    a = itertools.product((u1_range,u2_range, u3_range, u4_range))
-    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] in range(3,15), a))
-    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4))) in range(960, 1001), b)
+    a = itertools.product((l1_range), (u1_range), (u2_range), (u3_range), (u4_range))
+    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] in range(3,15), a))
+    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5))) in range(960, 1001), b)
 
 if uqty5 == 0:
     uqty6 = 0
 if uqty5 >= 1:
-    a = itertools.product((u1_range,u2_range, u3_range, u4_range, u5_range))
-    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] in range(3,15), a))
-    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5))) in range(960, 1001), b)
+    a = itertools.product(((l1_range), (u1_range),(u2_range), (u3_range), (u4_range), (u5_range)))
+    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] in range(3,15), a))
+    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6))) in range(960, 1001), b)
 
 if uqty6 == 0:
     uqty7 = 0
 if uqty6 >= 1:
-    a = itertools.product((u1_range, u2_range, u3_range, u4_range, u5_range, u6_range))
-    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] in range(3,15), a))
-    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6))) in range(960, 1001), b)
+    a = itertools.product(((l1_range), (u1_range), (u2_range), (u3_range), (u4_range), (u5_range), (u6_range)))
+    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] in range(3,15), a))
+    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7))) in range(960, 1001), b)
 
 if uqty7 == 0:
     uqty8 = 0
 if uqty7 >= 1:
-    a = itertools.product((u1_range, u2_range, u3_range, u4_range, u5_range, u6_range, u7_range))
-    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] in range(3,15), a))
-    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7))) in range(960, 1001), b)
+    a = itertools.product(((l1_range), (u1_range), (u2_range), (u3_range), (u4_range), (u5_range), (u6_range), (u7_range)))
+    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] in range(3,15), a))
+    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7)) + (x[7] * (upt8))) in range(960, 1001), b)
 
 if uqty8 == 0:
     uqty9 = 0
 if uqty8 >= 1:
-    a = itertools.product((u1_range, u2_range, u3_range, u4_range, u5_range, u6_range, u7_range, u8_range))
-    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] in range(3,15), a))
-    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7)) + (x[7] * (upt8))) in range(960, 1001), b)
+    a = itertools.product(((l1_range), (u1_range), (u2_range), (u3_range), (u4_range), (u5_range), (u6_range), (u7_range), (u8_range)))
+    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] in range(3,15), a))
+    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7)) + (x[7] * (upt8)) + (x[8] * (upt9))) in range(960, 1001), b)
 
 if uqty9 == 0:
     uqty10 = 0
 if uqty10 >= 1:
-    a = itertools.product((u1_range, u2_range, u3_range, u4_range, u5_range, u6_range, u7_range, u8_range, u9_range))
-    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] in range(3,15), a))
-    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7)) + (x[7] * (upt8)) + (x[8] * (upt9))) in range(960, 1001), b)
+    a = itertools.product(((l1_range), (u1_range), (u2_range), (u3_range), (u4_range), (u5_range), (u6_range), (u7_range), (u8_range), (u9_range)))
+    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] + x[9] in range(3,15), a))
+    c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7)) + (x[7] * (upt8)) + (x[8] * (upt9)) + (x[9] * (upt10))) in range(960, 1001), b)
 
 if uqty10 == 0:
     uqty11 = 0
 if uqty10 >= 1:
     uqty11 = 0
-    a = itertools.product((u1_range, u2_range, u3_range, u4_range, u5_range, u6_range, u7_range, u8_range, u9_range, u10_range))
-    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] + x[9] in range(3,15), a))
+    a = itertools.product(((l1_range), (u1_range), (u2_range), (u3_range), (u4_range), (u5_range), (u6_range), (u7_range), (u8_range), (u9_range), (u10_range)))
+    b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] + x[9] + x[10] in range(3,15), a))
     c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7)) + (x[7] * (upt8)) + (x[8] * (upt9)) + (x[9] * (upt10))) in range(960, 1001), b)
 
 if uqty11 == 0:
-    print('Done')
+    print('Created by Puzzle666')
 
 for out_come in c:
     print(out_come)
 
-with open('nums.txt', 'w') as f:
+#to write to the Text file, you must # the above calculations
+with open('list.txt', 'w') as f:
     for out_come in c:
        f.write((str(out_come)) + '\n')
 
 # with open('nums.txt', 'r') as f:
 #     print(f.readlines())
 
-
-# if uqty10 == [0]:
-#     a = itertools.product((u1_range))
-#     b = (filter(lambda x: x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] in range(3,15), a))
-#     c = (filter(lambda x: (lpt1) + (x[0] * (upt1)) + (x[1] * (upt2)) + (x[2] * (upt3)) + (x[3] * (upt4)) + (x[4] * (upt5)) + (x[5] * (upt6)) + (x[6] * (upt7)) + (x[7] * (upt8)) + (x[8] * (upt9))) in range(960, 1001), b)
